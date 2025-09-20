@@ -77,7 +77,7 @@ export default function MembrosPage() {
         const data = await res.json();
         if (!cancelled) {
           const arr = Array.isArray(data?.members) ? (data.members as unknown[]) : [];
-          const mapped: WidgetMember[] = arr.map((x) => ({
+          const mapped: WidgetMember[] = arr.map((x: any) => ({
             id: String(x.id),
             username: String(x.username ?? "Usuário"),
             avatar_url: String(x.avatar_url ?? ""),
