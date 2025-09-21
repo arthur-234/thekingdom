@@ -60,7 +60,7 @@ export const SparklesCore = ({
     particles: {
       number: {
         value: particleDensity,
-        density: { enable: true, area: 800 },
+        density: { enable: true },
       },
       color: { value: particleColor },
       opacity: { value: 0.7 },
