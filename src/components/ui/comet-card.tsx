@@ -43,7 +43,8 @@ export const CometCard: React.FC<CometCardProps> = ({
   const contentY = useTransform(my, [-0.5, 0.5], [8, -8]);
 
   // Profundidade do conteúdo em translateZ baseada na distância do centro
-  const contentZ = useTransform([mx, my], ([vx, vy]: [number, number]) => {
+  const contentZ = useTransform([mx, my], (values: number[]) => {
+    const [vx, vy] = values;
     const dist = Math.min(1, Math.hypot(vx, vy) / 0.6); // 0..1
     const t = 1 - dist; // centro -> 1, borda -> 0
     return 32 * t; // até ~32px de profundidade
