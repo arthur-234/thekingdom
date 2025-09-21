@@ -50,7 +50,7 @@ export const SparklesCore = ({
       events: {
         onHover: { enable: false, mode: "repulse" },
         onClick: { enable: false, mode: "push" },
-        resize: true,
+        resize: { enable: true },
       },
       modes: {
         push: { quantity: 2 },
